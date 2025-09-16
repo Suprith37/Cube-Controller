@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Cube = require('../models/Cube');
 
-const BASE_URL = "https://cube-controller.vercel.app/"
+const BASE_URL = "https://cube-controller.onrender.com"
 
 // GET cube data by ID (if not found, create default)
 router.get(`${BASE_URL}/:id`, async (req, res) => {
