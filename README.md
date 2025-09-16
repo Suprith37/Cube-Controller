@@ -32,6 +32,7 @@ Prerequisites
 The repository link
 
 - open https://github.com/Suprith37/Cube-Controller/tree/1156d21b53ecbcb9ce3b18994fb8855447cbd85e
+- Live link : https://cube-controller.vercel.app/
   
 
 
