@@ -63,7 +63,7 @@ function init() {
   animate();
 
   // Fetch saved cube data from backend (position and speed)
-  fetch('${BASE_URL}/api/cubes/cube_1')
+  fetch(`${BASE_URL}/api/cubes/cube_1`)
     .then(res => res.json())
     .then(data => {
       // Set cube's position and speed from database
@@ -104,7 +104,7 @@ function resetCube() {
   document.getElementById('speed-val').innerText = rotationSpeed;
 
   // Call backend to reset cube data in database
-  fetch('${BASE_URL}/api/cubes/cube_1/reset', { method: 'POST' })
+  fetch(`${BASE_URL}/api/cubes/cube_1/reset`, { method: 'POST' })
     .then(res => res.json())
     .then(data => showFeedback('Cube reset to default.'));
 }
