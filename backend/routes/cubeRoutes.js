@@ -5,7 +5,7 @@ const Cube = require('../models/Cube');
 const BASE_URL = "https://cube-controller.vercel.app/"
 
 // GET cube data by ID (if not found, create default)
-router.get('${BASE_URL}/:id', async (req, res) => {
+router.get(`${BASE_URL}/:id`, async (req, res) => {
   try {
     const cube = await Cube.findOne({ cubeId: req.params.id });
     
@@ -28,7 +28,7 @@ router.get('${BASE_URL}/:id', async (req, res) => {
 });
 
 
-router.post('${BASE_URL}/:id/save', async (req, res) => {
+router.post(`${BASE_URL}/:id/save`, async (req, res) => {
   try {
     const cubeId = req.params.id;
     const { position, rotationSpeed } = req.body;
@@ -79,7 +79,7 @@ router.post('${BASE_URL}/:id/save', async (req, res) => {
 
 
 // Reset cube to default position and speed
-router.post('${BASE_URL}/:id/reset', async (req, res) => {
+router.post(`${BASE_URL}/:id/reset`, async (req, res) => {
   try {
     const defaultData = {
       position: { x: 0, y: 0, z: 0 },
