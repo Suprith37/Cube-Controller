@@ -7,6 +7,8 @@ let rotationSpeed = 0.01;
 // Limits for how far the cube can move on x and y axes
 const boundaries = { x: 5, y: 5 };
 
+const BASE_URL = "https://cube-controller.onrender.com"
+
 // Get reference to feedback text element for showing messages
 const feedback = document.getElementById('feedback');
 
@@ -61,7 +63,7 @@ function init() {
   animate();
 
   // Fetch saved cube data from backend (position and speed)
-  fetch('/api/cubes/cube_1')
+  fetch('${BASE_URL}/api/cubes/cube_1')
     .then(res => res.json())
     .then(data => {
       // Set cube's position and speed from database
@@ -113,7 +115,7 @@ function showFeedback(msg) {
 }
 // saving cube' current state
 function saveCube() {
-  fetch('/api/cubes/cube_1/save', {
+  fetch('${BASE_URL}/api/cubes/cube_1/save', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
