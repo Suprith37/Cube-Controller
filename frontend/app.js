@@ -104,7 +104,7 @@ function resetCube() {
   document.getElementById('speed-val').innerText = rotationSpeed;
 
   // Call backend to reset cube data in database
-  fetch('/api/cubes/cube_1/reset', { method: 'POST' })
+  fetch('${BASE_URL}/api/cubes/cube_1/reset', { method: 'POST' })
     .then(res => res.json())
     .then(data => showFeedback('Cube reset to default.'));
 }
