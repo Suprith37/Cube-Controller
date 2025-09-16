@@ -1,0 +1,41 @@
+<!-- frontend -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Cube Controller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+  <div id="control-panel">
+    <h2>Cube Controller</h2>
+    <label>Rotation Speed: <span id="speed-val">0.01</span></label>
+    
+    <!--  Rotation speed  -->
+    <input type="range" min="0" max="0.1" step="0.01" value="0.01" id="speed-slider"/>
+
+    <!-- buttons to move the cube -->
+    <div class="buttons">
+      <button onclick="move('up')">↑</button>
+      <button onclick="move('left')">←</button>
+      <button onclick="move('right')">→</button>
+      <button onclick="move('down')">↓</button>
+    </div>
+
+    <!-- Reset button -->
+    <button onclick="resetCube()">Reset</button>
+
+    <!-- Saving cube position-->
+    <button onclick="saveCube()">Save Current State</button>
+    <p id="feedback"></p>
+  </div>
+
+  <canvas id="cube-canvas"></canvas>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
