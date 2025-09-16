@@ -31,7 +31,8 @@ Prerequisites
 
 The repository link
 
-- Open https://github.com/Prathampacharya15/3d_Cube/tree/main/threejs-app
+- open https://github.com/Suprith37/Cube-Controller/tree/1156d21b53ecbcb9ce3b18994fb8855447cbd85e
+  
 
 
 
