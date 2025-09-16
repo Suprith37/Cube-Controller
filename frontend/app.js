@@ -115,7 +115,7 @@ function showFeedback(msg) {
 }
 // saving cube' current state
 function saveCube() {
-  fetch('${BASE_URL}/api/cubes/cube_1/save', {
+  fetch(`${BASE_URL}/api/cubes/cube_1/save`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
